@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+</head>
+<body style="background-color: #F3F3F3; height: 100px;">
+
+
+  <div style="font-size: 1.5em; text-align: center; padding: 20px;"></div>
+
+  <div style="width: 70%; text-align: left; margin: auto; color: black; ">
+    <p>
+      Hi <%= @contact.first_name.capitalize %>,
+    </p>
+
+    <p>
+      Your friend <%= @user.name.capitalize %> just claimed money owed to him via Where's My Money. After searching your name, our records indicate that you may have money waiting for you as well.
+    </p>
+
+    <p>
+      To claim your money, just follow <a href="www.momoney.tk">this link</a> to Where's My Money and complete the necessary steps to find your money!
+    </p>
+
+    <p>Sincerely,</p>
+
+    <p>The Where's My Money Team</p>
+  </div>
+
+</body>
+</html>

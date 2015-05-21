@@ -1,0 +1,17 @@
+<div>
+  <div class="results row">
+      <div class="vcenter col-xs-3">
+      <img class="profile-picture" src='/assets/googlecontacts/<%= user.have_google_photo ? user.googlecontactid : "stockimages/nopicture" %>.jpg'>
+        <%= user.name %>
+      </div>
+      <div class="vcenter col-xs-4">
+        <%= user.email %>
+      </div>
+      <div class="vcenter col-xs-2">
+        <span class="amount_owed"><%= user.results.count %> hits</span>
+      </div>
+      <div class="vcenter col-xs-1">
+       <input type="checkbox" name="contacts[]" value="<%= user.id %>"></label>
+     </div>
+   </div>
+</div>

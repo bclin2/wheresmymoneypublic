@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="results_header row text-center">
+    <div class="col-xs-12">
+      Thank you for using Where's My Money!<BR>
+    </div>
+  </div>
+  <div class="results_header row text-center ">
+    <div class="col-xs-12">
+      You had <%= current_user.results.count %> results, please check your email to claim your funds.<BR>
+    </div>
+  </div>
+  <div class="results_header row text-center">
+    <div class="col-xs-12">
+      Your <%= current_user.contacts.count %> contacts had <%= current_user.contacts.inject(0){|sum, contact| sum + contact.results.count } %> results.
+    </div>
+  </div>
+  <div class="results_header row text-center">
+    <div class="col-xs-12">
+      Those you selected will be receiving an email with claim instructions shortly.
+    </div>
+  </div>
+  <div class="results_header row text-center">
+    <div class="col-xs-12">
+      Hopefully, they'll be as satisfied as the users below.<BR>
+    </div>
+  </div>
+  <div>
+    <div class="results row margin_top_10">
+      <div class="vcenter col-xs-3">
+        <img class="profile-picture" src='/assets/testimonials/sherif.jpeg'>
+        Sherif Abushadi
+      </div>
+      <div class="vcenter col-xs-4">
+        <i>I'm not fooling myself, this had better be enough money to retire.  Otherwise, it's a non-event.</i>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="results row">
+      <div class="vcenter col-xs-3">
+        <img class="profile-picture" src='/assets/testimonials/topher.jpeg'>
+        Topher Lubaway
+      </div>
+      <div class="vcenter col-xs-4">
+        <i>Awesome, now I can get the spare tire for my air-wheel!</i>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="results row">
+      <div class="vcenter col-xs-3">
+        <img class="profile-picture" src='/assets/testimonials/amadou.jpeg'>
+        Amadou Sallah
+      </div>
+      <div class="vcenter col-xs-4">
+        <i>Awesooooooooooooommmmmmmmee!!!!!!!!!</i>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="results row">
+      <div class="vcenter col-xs-3">
+        <img class="profile-picture" src='/assets/testimonials/yumiko.jpeg'>
+        Yumiko-chan
+      </div>
+      <div class="vcenter col-xs-4">
+        <i>Subarashii desu ne!!!! Ganbatte Mo'money!</i>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center margin_top_10">
+    <div class="col-xs-12">
+      <a href="/">
+        <button class="btn btn-primary">Home</button>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+web:           spring rails s
+worker:        spring rake environment resque:work QUEUE=*
+scheduler:     spring rake environment resque:scheduler
+redis:         redis-server

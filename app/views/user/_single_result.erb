@@ -1,0 +1,34 @@
+
+      <div class="results row">
+
+        <div class="vcenter col-xs-3">
+          <%= person['name'] %>
+        </div>
+
+        <div class="vcenter col-xs-4">
+          <% if person['address'].include?("Not Disclosed") %>
+          <%= person['address'].gsub!("Not Disclosed", "") %>
+          <% else %>
+          <%= person['address'] %>
+          <% end %>
+        </div>
+
+        <div class="vcenter col-xs-2">
+          <%= person['company'] %>
+        </div>
+
+        <div class="vcenter col-xs-2">
+          <span class="amount_owed"><%= person['money_owed'] %></span>
+        </div>
+
+        <div class="vcenter col-xs-1">
+          <% unless @user.id.nil? %>
+            <input type="checkbox" class="user_check_box">
+            <%# button_to "Claim", user_contacts_path(@user), method: :get, class: "btn btn-success claim" %>
+          <% end %>
+        </div>
+        <div class="vcenter col-xs-1">
+          <button type="button" class="close not_me" aria-label="Close">&times;</span></button>
+        </div>
+
+      </div>

@@ -1,0 +1,69 @@
+<div class="container">
+
+<div class="results_header row text-center">
+    <div class="col-xs-12">
+      <% case @user.results.count%>
+      <% when 0 %>
+      No results matching "<%= @user.name %>".
+      <div>
+        <a href="/">
+          <button class="btn btn-primary">Back</button>
+        </a>
+      </div>
+      <% when 1 %>
+     1 result matching "<%= @user.name %>":
+     <% else %>
+     <%= @user.results.count %> results matching "<%= @user.name %>":
+     <% end %>
+    </div>
+  </div>
+  <div class="legend">
+    <div id="high"><span>>10</span></div>
+    <div id="middle"><span>5~10</span></div>
+    <div id="low"><span><5</span></div>
+  </div>
+  <div id="map_container">
+
+  </div>
+
+  <% @user.results.group_by {|result| result.state}.each do |state, state_results| %>
+
+  <div class="row state_container" id="<%= state %>">
+    <div class="state vcenter col-xs-5">
+      <%= Madison.get_name(state) %>
+    </div>
+
+    <% state_results.each  do |person| %>
+
+      <%= render "single_result", {person: person} %>
+    <% end %>
+
+  </div>
+  <% end %>
+  <div class="state vcenter col-xs-5">
+  </div>
+  <!-- <div class="user_choices modal" id="states_confirm_modal"> -->
+      <%# button_to "Claim All", user_contacts_path(@user), method: :get, class: "btn btn-success claim" %>
+  <!-- </div> -->
+  <div class="center">
+    <button type="button" class="btn btn-primary claim-prop" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Claim Properties</button>
+  </div>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title" id="exampleModalLabel">Click claim to reviece  an email with instructions of how to collect money for each of these properties</h3>
+
+        </div>
+        <div class="modal-body user_choices">
+        </div>
+        <div class="modal-footer center">
+          <button type="button" class="btn btn-success user_claim_button">Claim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

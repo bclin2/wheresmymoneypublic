@@ -1,0 +1,62 @@
+module EmailerHelper
+
+	def get_state_link(state_codes)
+
+		claim_links_hash = {
+			"AL" => "http://www.moneyquestalabama.com/how.aspx",
+			"AK" => "http://treasury.dor.alaska.gov/UnclaimedProperty.aspx",
+			"AZ" => "http://www.azunclaimed.gov/owners/FilingAClaim.html",
+			"AR" => "",
+			"CA" => "https://ucpi.sco.ca.gov/UCP/Default.aspx",
+			"CO" => "https://www.colorado.gov/apps/treasury/ucp/claims/personalSearch.faces",
+			"CT" => "",
+			"DE" => "",
+			"DC" => "http://cfo.dc.gov/webform/unclaimed-property-inquiry-form",
+			"FL" => "https://www.fltreasurehunt.org/",
+			"GA" => "",
+			"HI" => "",
+			"ID" => "https://www.sto.idaho.gov/UnclaimedProperty/Search.aspx",
+			"IL" => "",
+			"IN" => "https://indianaunclaimed.gov/apps/ag/ucp/index.html",
+			"IA" => "https://www.greatiowatreasurehunt.com/",
+			"KS" => "https://kansascash.com/prodweb/up/ownr_1.php",
+			"KY" => "https://secure.kentucky.gov/treasury/unclaimedProperty/Default.aspx",
+			"LA" => "https://www.treasury.state.la.us/ucpm/UP/UP_Search.asp",
+			"ME" => "https://www.maine.gov/treasurer/unclaimed_property/online/search.php",
+			"MD" => "https://interactive.marylandtaxes.com/individuals/unclaim/default.aspx",
+			"MA" => "http://www.mass.gov/treasury/unclaimed-prop/",
+			"MI" => "http://www.michigan.gov/treasury/0,1607,7-121-44435_57506---,00.html",
+			"MN" => "http://mn.gov/commerce/images/claim-form-and-requirements.pdf",
+			"MS" => "http://www.treasurerlynnfitch.com/UnclaimedProperty/Pages/default.aspx",
+			"MO" => "http://treasurer.mo.gov/UnclaimedProperty/",
+			"MT" => "https://revenue.mt.gov/home/businesses/unclaimed_property",
+			"NE" => "https://treasurer.nebraska.gov/up/",
+			"NV" => "https://nevadatreasurer.gov/upSearch/",
+			"NH" => "http://www.nh.gov/treasury/Divisions/AP/APindex.htm",
+			"NJ" => "http://www.unclaimedproperty.nj.gov/pdf/claim-form.pdf",
+			"NM" => "http://www.tax.newmexico.gov/Individuals/search-unclaimed-property.aspx",
+			"NY" => "",
+			"NC" => "https://www.nctreasurer.com/Claim-Your-Cash/Claim-Your-NC_Cash/Pages/Search.aspx",
+			"ND" => "https://land.nd.gov/UnclaimedProperty/unclaimedpropertyapps/SearchClaims.aspx",
+			"OH" => "http://www.com.state.oh.us/unfd/",
+			"OK" => "https://www.ok.gov/unclaimed/claim.php",
+			"OR" => "",
+			"PA" => "http://www.patreasury.gov/Unclaimed/Search.html",
+			"RI" => "http://www.treasury.ri.gov/treasury-divisions/unclaimed-property/",
+			"SC" => "",
+			"SD" => "http://www.sdtreasurer.gov/",
+			"TN" => "https://www.claimittn.gov/",
+			"TX" => "https://mycpa.cpa.state.tx.us/up/Search.jsp",
+			"UT" => "https://mycash.utah.gov/",
+			"VT" => "https://secure2.vermonttreasurer.gov/unclaimed/ownerSearch.asp",
+			"VA" => "https://www.trs.virginia.gov/vaMoneySearch/WebClaims/NewWebClaim",
+			"WA" => "http://ucp.dor.wa.gov/default.aspx",
+			"WV" => "http://www.wvtreasury.com/Unclaimed-Property/Search-Claim",
+			"WI" => "https://tap.revenue.wi.gov/UCP/_/",
+			"WY" => "",
+		}
+		return state_codes.map! {|state| claim_links_hash[state]}
+	end
+
+
+end

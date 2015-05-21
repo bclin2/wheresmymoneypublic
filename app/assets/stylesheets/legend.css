@@ -1,0 +1,44 @@
+.legend {
+	display: block;
+	position: relative;
+	z-index: -1;
+	padding-top: 20%;
+	margin-right: 5%;
+	float: right;
+	height: 6em;
+	width: 1em;
+}
+
+#high{
+	background: #F26C4F;
+	width: 1em;
+	height: 2em;
+}
+
+#high span {
+	display: block;
+	padding-left: 15px;
+}
+
+#middle{
+
+	background: #FFF467;
+	width: 1em;
+	height: 2em;
+}
+
+#middle span {
+	display: block;
+	padding-left: 15px;
+}
+
+#low {
+	background: #82CA9D;
+	width: 1em;
+	height: 2em;
+}
+
+#low span {
+	display: block;
+	padding-left: 15px;
+}

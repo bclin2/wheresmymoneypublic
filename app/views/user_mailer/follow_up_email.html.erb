@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body style="background-color: #F3F3F3; height: 100px;">
+
+	<div style="font-size: 1.5em; text-align: center; padding: 20px;">You're just one step away from claiming your money...</div>
+
+	<div style="width: 70%; text-align: left; margin: auto;">
+		<p>
+			Hey <%= @user.first_name %>! Thanks for using Where's My Money.
+		</p>
+
+		<p>
+			To claim your money, just follow <a href="<%= @state_link %>">this link</a> to your respective state treasury and complete the necessary steps to file your claim.
+		</p>
+
+
+	</div>
+
+
+</body>
+</html>
